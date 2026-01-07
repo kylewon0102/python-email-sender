@@ -1,53 +1,94 @@
 # Gmail SMTP Email Sender (Python)
 
 A lightweight Python utility for sending emails via Gmail SMTP with:
+
 - Plain-text and HTML support
 - Inline images (CID)
 - File attachments
 - Environment-based credential management
 
+---
+
 ## Features
+
 - Gmail SMTP (SSL)
-- Multipart emails (text + HTML)
+- Multipart emails (plain text + HTML)
 - Inline logo support
 - Multiple recipients
 - Attachment handling
 
-##Guide:
-Install necessary repos:
+---
 
-1. Create & activate virtual environment:
-$ python3 -m venv venv
-$ source venv/bin/activate
+## Setup Guide
 
-2. Installing Libraries:
-$ pip install -r requirements.txt
+### 1. Create & Activate Virtual Environment
 
+    python3 -m venv venv
+    source venv/bin/activate
 
-3. Enabling SMTP Setup for own Gmail:
-3-1. Enable 2-step verification on your gmail account
-    1. Google Account -> security
-    2.  turn on 2 step verification)
+---
 
-3-2. Create App password
-    1. Google Account -> security
-    2. Search "App Passwords"
-    3. App: Mail
-    4. Name it something that reminds of the app (ex: backend - smtp)
-    5. copy the 16-character password, past in .env file in the same directory as this file
+### 2. Install Dependencies
 
+    pip install -r requirements.txt
 
-By now, your .env file should look like:
-GMAIL_USER = "example@gmail.com"
-GMAIL_PASSCODE = "exam plee pass code" #example passcode
+---
 
-Attach necessary files / html / logo into the repo
-Final shape of the directory should be:
-- Readme.md
-- .env
-- main.py
-- example.pdf
-- example.html
-- logo.jpg
+### 3. Gmail SMTP Configuration
 
-4. edit the EMAIL_LIST, subject & body text, and run the main.py
+#### 3.1 Enable 2-Step Verification
+1. Go to Google Account → Security
+2. Enable 2-Step Verification
+
+#### 3.2 Create an App Password
+1. Google Account → Security
+2. Search for "App passwords"
+3. App: Mail
+4. Name: e.g. backend-smtp
+5. Copy the generated 16-character password
+
+---
+
+### 4. Environment Variables
+
+Create a .env file in the project root:
+
+    GMAIL_USER=example@gmail.com
+    GMAIL_PASSCODE=your_16_character_app_password
+
+---
+
+## Project Structure
+
+    gmail-smtp-email-sender/
+    ├── main.py
+    ├── example.pdf
+    ├── example.html
+    ├── logo.jpg
+    ├── requirements.txt
+    ├── .env
+    └── README.md
+
+---
+
+## Usage
+
+1. Edit the following variables in main.py:
+   - EMAIL_LIST
+   - SUBJECT
+   - BODY
+
+2. Run the script:
+
+    python main.py
+
+Emails will be sent to all recipients listed in EMAIL_LIST.
+
+---
+
+## Notes
+
+- Gmail App Passwords are required
+- Inline images use CID references
+- Plain-text fallback is included for compatibility
+- Intended for personal automation and low-volume usage
