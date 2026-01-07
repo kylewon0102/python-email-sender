@@ -13,7 +13,7 @@ A lightweight Python utility for sending emails via Gmail SMTP with:
 - Multiple recipients
 - Attachment handling
 
-Guide:
+##Guide:
 Install necessary repos:
 
 1. Create & activate virtual environment:
@@ -38,10 +38,8 @@ $ pip install -r requirements.txt
 
 
 By now, your .env file should look like:
----
 GMAIL_USER = "example@gmail.com"
 GMAIL_PASSCODE = "exam plee pass code" #example passcode
----
 
 Attach necessary files / html / logo into the repo
 Final shape of the directory should be:
