@@ -9,7 +9,7 @@ import os
 def main():
     # variables
     EMAIL_LIST = [
-        "kylewon0102@gmail.com", 
+        "example@gmail.com", 
         #"example2@gmail.com"
     ]
     SUBJECT = "Hello Email"
@@ -18,7 +18,7 @@ def main():
         "I am excited about the opportunity to contribute to your team "
         "and would love to discuss how my skills align with your needs.\n\n"
         "Best regards,\n"
-        "Kyle Won"
+        "Sender"
     )
     BASE_DIR = os.path.dirname(__file__)
     ATTACHMENTS = [os.path.join(BASE_DIR, "example.pdf")]
