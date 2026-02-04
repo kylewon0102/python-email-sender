@@ -1,12 +1,28 @@
 # Gmail SMTP Email Sender (Python)
 
-A lightweight Python utility for sending emails via Gmail SMTP with:
+## Problem
 
-- Plain-text and HTML support
-- Inline images (CID)
-- File attachments
-- Environment-based credential management
+Manual email reporting does not scale for automated workflows.
 
+Goal: create a lightweight Python utility for sending templated emails with attachments.
+
+## Solution
+
+Implemented SMTP automation using Gmail.
+
+Supports batch recipients and customizable templates.
+
+## Example Use Cases
+
+- Daily data pipeline reports
+- System health notifications
+- Automated business alerts
+
+## Tech Stack
+
+- Python
+- smtplib
+- email.mime
 ---
 
 ## Features
